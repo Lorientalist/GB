@@ -1,42 +1,22 @@
 package homework.lesson5;
 
 public class Horse extends Animal {
-
-
     public Horse(double runLimit, double swimLimit, double jumpLimit, String name) {
-        super(runLimit, swimLimit, jumpLimit, name);
+        super(runLimit, swimLimit, jumpLimit, name, "Коняжка");
     }
 
     @Override
-    void run(double length) {
-        if (length <= 0) {
-            System.out.println("Я лошадка. Я пробежал 0 метров!");
-        } else if (length <= runLimit) {
-            System.out.println("Я лошадка. Я пробежал " + length + " метров!");
-        } else {
-            System.out.println("Я лошадка. Я пробежал " + runLimit + " метров!");
-        }
+    public void run(double length) {
+        runAction(length);
     }
 
     @Override
-    void swim(double length) {
-        if (length <= 0) {
-            System.out.println("Я лошадка. Я проплыл 0 метров!");
-        } else if (length <= swimLimit) {
-            System.out.println("Я лошадка. Я проплыл " + length + " метров!");
-        } else {
-            System.out.println("Я лошадка. Я проплыл " + swimLimit + " метров!");
-        }
+    public void swim(double length) {
+        swimAction(length);
     }
 
     @Override
-    void jump(double height) {
-        if (height <= 0) {
-            System.out.println("Я лошадка. Я прыгнул на 0 метров!");
-        } else if (height <= jumpLimit) {
-            System.out.println("Я лошадка. Я прыгнул на " + height + " метра!");
-        } else {
-            System.out.println("Я лошадка. Я прыгнул на " + jumpLimit + " метра!");
-        }
+    public void jump(double height) {
+        jumpAction(height);
     }
 }

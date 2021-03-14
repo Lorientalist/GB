@@ -1,36 +1,42 @@
 package homework.lesson5;
 
 public class Horse extends Animal {
+
+
+    public Horse(double runLimit, double swimLimit, double jumpLimit, String name) {
+        super(runLimit, swimLimit, jumpLimit, name);
+    }
+
     @Override
     void run(double length) {
         if (length <= 0) {
-            System.out.println("Я конек-горбунок. Я пробежал 0 метров!");
-        } else if (length <= 1500) {
-            System.out.println("Я конек-горбунок. Я пробежал " + length + " метров!");
+            System.out.println("Я лошадка. Я пробежал 0 метров!");
+        } else if (length <= runLimit) {
+            System.out.println("Я лошадка. Я пробежал " + length + " метров!");
         } else {
-            System.out.println("Я конек-горбунок. Я пробежал 1500 метров!");
+            System.out.println("Я лошадка. Я пробежал " + runLimit + " метров!");
         }
     }
 
     @Override
     void swim(double length) {
         if (length <= 0) {
-            System.out.println("Я конек-горбунок. Я проплыл 0 метров!");
-        } else if (length <= 100) {
-            System.out.println("Я конек-горбунок. Я проплыл " + length + " метров!");
+            System.out.println("Я лошадка. Я проплыл 0 метров!");
+        } else if (length <= swimLimit) {
+            System.out.println("Я лошадка. Я проплыл " + length + " метров!");
         } else {
-            System.out.println("Я конек-горбунок. Я проплыл 100 метров!");
+            System.out.println("Я лошадка. Я проплыл " + swimLimit + " метров!");
         }
     }
 
     @Override
     void jump(double height) {
         if (height <= 0) {
-            System.out.println("Я конек-горбунок. Я прыгнул на 0 метров!");
-        } else if (height <= 3) {
-            System.out.println("Я конек-горбунок. Я прыгнул на " + height + " метра!");
+            System.out.println("Я лошадка. Я прыгнул на 0 метров!");
+        } else if (height <= jumpLimit) {
+            System.out.println("Я лошадка. Я прыгнул на " + height + " метра!");
         } else {
-            System.out.println("Я конек-горбунок. Я прыгнул на 3 метра!");
+            System.out.println("Я лошадка. Я прыгнул на " + jumpLimit + " метра!");
         }
     }
 }

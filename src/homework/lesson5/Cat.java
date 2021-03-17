@@ -11,6 +11,11 @@ public class Cat extends Animal {
     }
 
     @Override
+    void swim(double length) {
+        cantSwim();
+    }
+
+    @Override
     public void jump(double height) {
         jumpAction(height);
     }

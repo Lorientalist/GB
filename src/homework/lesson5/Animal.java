@@ -1,6 +1,6 @@
 package homework.lesson5;
 
-public class Animal {
+public abstract class Animal {
     protected static String actionTypeRun = "пробежал(а)";
     protected static String actionTypeSwim = "проплыл(а)";
     protected static String actionTypeJump = "прыгнул(а)";
@@ -19,15 +19,19 @@ public class Animal {
         this.animalType = animalType;
     }
 
-    public void run(double length) {
+    abstract void run(double length);
+    abstract void swim(double length);
+    abstract void jump(double height);
+
+    protected void cantRun() {
         System.out.println("Я " + animalType + " по имени " + name + " не могу бежать!");
     }
 
-    public void swim(double length) {
+    protected void cantSwim() {
         System.out.println("Я " + animalType + " по имени " + name + " не могу плыть!");
     }
 
-    public void jump(double height) {
+    protected void cantJump() {
         System.out.println("Я " + animalType + " по имени " + name + " не могу прыгать!");
     }
 

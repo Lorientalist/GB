@@ -2,8 +2,8 @@ package homework.lesson7;
 
 public class Settings {
     private int opponentMode = 0;
-    private int mapSize;
-    private int winLength;
+    private int mapSize = 3;
+    private int winLength = 3;
 
     public int getOpponentMode() {
         return opponentMode;

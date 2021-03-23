@@ -13,7 +13,12 @@ public class About extends JFrame {
     private GameWindow gameWindow;
 
     About(GameWindow gameWindow) {
-        setBackground(Color.gray);
+        setBackground(Color.BLACK);
+        gameWindowSettings(gameWindow);
+    }
+
+
+    private void gameWindowSettings(GameWindow gameWindow) {
         this.gameWindow = gameWindow;
         setSize(win_width, win_height);
         setTitle("About Game");
@@ -22,9 +27,7 @@ public class About extends JFrame {
         winPosY = (int) (gameWindowBounds.getCenterY() - win_height / 2);
         setLocation(winPosX, winPosY);
         setResizable(false);
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-//    void setBackgroundColor () {
-//        setBackground(Color.gray);
-//    }
 }

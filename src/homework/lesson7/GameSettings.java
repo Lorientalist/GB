@@ -106,27 +106,28 @@ public class GameSettings extends JFrame {
     }
 
     private void addButtonSaveGameSetting() {
-        saveGameSettings = new JButton("Save and start new game");
+        saveGameSettings = new JButton("Save setting");
         saveGameSettings.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 //                collectAllSettings();
+                setVisible(false);
             }
         });
         add(saveGameSettings);
     }
 
-//    private void collectAllSettings() {
-//        int gameMode;
-//        int mapSize;
-//        int winLength;
-//        if (pve.isSelected()) {
-//            gameMode = GameMap.gmPVE;
-//        } else if (pvp.isSelected()) {
-//            gameMode = GameMap.gmPVP;
-//        } else {
-//            throw new RuntimeException("Incorrect game mode");
-//        }
-//    }
+    private void collectAllSettings() {
+        int gameMode;
+        int mapSize;
+        int winLength;
+        if (pve.isSelected()) {
+            gameMode = GameMap.GM_PVE;
+        } else if (pvp.isSelected()) {
+            gameMode = GameMap.GM_PVP;
+        } else {
+            throw new RuntimeException("Incorrect game mode");
+        }
+    }
 
 }
